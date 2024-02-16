@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Menu</title>
+</head>
+<body>
+  
+<main class="central">
+  <div class="content">
+    <div class="barre">
+           <div class="barre un"></div>
+           <div class="barre deux"></div>
+           <div class="barre trois"></div>
+           <div class="barre quatre"> <span class="burger"></span></div>
+    </div>
+
+             <div class="wrapper">
+                
+                      <div class="inner">
+                        <img src="asset/img/villa4.jpg" alt="villa">
+                        <h1>elevate</h1>
+                        <p class="number" >1</p>
+                        <div class="overlay"></div>
+                      </div>
+                          
+                 
+                 
+                     <div class="inner">
+                         <img src="asset/img/villa.jpg" alt="villa">
+                         <h1>innovate</h1>
+                         <p class="number" >2</p>
+                         <div class="overlay"></div>
+                       </div>
+                           
+                 
+                 
+                     <div class="inner">
+                         <img src="asset/img/villa2.jpg" alt="villa">
+                         <h1>reimagine</h1>
+                         <p class="number">3</p>
+                         <div class="overlay"></div>
+                       </div>
+                          
+                 
+                 
+                     <div class="inner">
+                         <img src="asset/img/villa3.jpg" alt="villa">
+                         <h1>immerse</h1>
+                         <p class="number">4</p>
+                         <div class="overlay"></div>
+                       </div>
+                          
+                 
+             </div>
+             
+
+  </div>
+          <nav class="menu">
+            <svg class="cross" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
+                 <ul>
+                     <li><a href="#" class="sitemap">sitemap</a></li>
+                      <li><a href="#" class="link">Index  <span class="numero">01</span></a> </li>
+                      <li><a href="#" class="link">About <span  class="numero">02</span></a></li>
+                      <li><a href="#" class="link" >Expertise <span  class="numero">03</span></a></li>
+                      <li><a href="#" class="link">Contact <span  class="numero">04</span></a></li>
+                 </ul>
+          </nav>
+</main>
+   
+                      
+  <script>
+const btn=document.querySelector('.burger');
+const menu=document.querySelector('.menu');
+const content=document.querySelector('.content');
+
+btn.addEventListener("click", ()=>{
+   content.classList.add('slide');
+  menu.classList.add('slideLeft');
+  btn.style.visibility="hidden";
+  document.documentElement.style.setProperty('--bg-color','#121214')
+})
+
+const croix=document.querySelector(".cross");
+croix.addEventListener("click",()=>{
+  console.log('pat66')
+ menu.classList.remove('slideLeft');
+ content.classList.remove('slide');
+ btn.style.visibility="visible";
+ document.documentElement.style.setProperty('--bg-color','#f2f6ff')
+})
+  </script>
+    
+</body>
+</html>
